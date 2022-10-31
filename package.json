@@ -1,0 +1,14 @@
+{
+  "name": "magic-mirror",
+  "version": "1.0.0",
+  "description": "Barebones site build",
+  "main": "index.js",
+  "scripts": {
+    "sass-transpile": "node-sass -w scss -o css"
+  },
+  "author": "Glendon Gengel",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
