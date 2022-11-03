@@ -1,3 +1,5 @@
+//sass --watch scss/style.scss css/style.css
+
 @font-face {
   font-family: 'alice-regular';
   src: url('fonts/alice-regular-webfont.woff2') format('woff2'),
@@ -43,7 +45,7 @@ body {
 }
 
 
-@for $i from 1 through 1000 {
+@for $i from 1 through 4000 {
   .char:nth-of-type(#{$i}) {
     animation-delay: (5 * random(300)) + ms;
   }

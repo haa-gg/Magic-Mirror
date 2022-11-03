@@ -34,5 +34,5 @@ target.innerHTML = chars.map(c => `<span class="char">${c}</span>`).join('');
 }
 
 //Equivalent to hitting the play button on my big ol' music box!
-glenToDo();
+setInterval(glenToDo(), 60000);
 
