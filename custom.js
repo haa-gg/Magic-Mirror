@@ -41,5 +41,5 @@ target.innerHTML = chars.map(c => `<span class="char">${c}</span>`).join('');
 
 //Equivalent to hitting the play button on my big ol' music box once per minute!
 mirrorQuote();
-setInterval(mirrorQuote, 10000);
+setInterval(mirrorQuote, 60000);
 
