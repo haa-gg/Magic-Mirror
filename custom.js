@@ -6,8 +6,10 @@ function mirrorQuote() {
   Sidenote: if you copy + paste the URL below into your browser you can see the array in a totally useless but kinda interesting way raw JSON data looks (no viruses, pinky swear!)*/
   var json = $.getJSON("https://sheets.googleapis.com/v4/spreadsheets/1SiztiruV1t3-VAlLzBucewVlQOcobkADM4MuF0U-8CM/values/'Sheet1'/?key=AIzaSyA1T4CcA8nnxMfxShN7Blrinr9y7LL5CzY", function(json) {
 
-    $('.quote span').remove();
-    $('.author p').remove();
+//Quotes are cool and all but they get stale after being on the screen for a bit, the lines below remove the currently displayed quote with
+$('.quote span').remove();
+$('.author p').remove();
+
     //Response granted, no need to light any more incense!
     /*We set the variable "quote" to a randomly selected JSON value from the response JSON object*/
     var quote = ~~(Math.random()*json.values.length);
@@ -17,14 +19,12 @@ function mirrorQuote() {
        $('.author').prepend("<p>- " + json.values[quote][1] + "</p>");
 
 
-//text split portion
+//Text split portion
 //Set the text-splitting target to the element with a class of "quote"
 const target = document.querySelectorAll('body .quote')[0];
 
 //This value of "val" is set to specifically focus on the text nestled inside this object
 const val = target.textContent;
-
-console.log(val);
 
 //This is a damn funky operation in javascript, exact details here:https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split
 //What it's doing is breaking up whatever string is passed to it and breaking it into new values based by on a specified divider, in this case '' which translates to "every independent character"
@@ -35,8 +35,6 @@ const chars = val.split('');
 target.innerHTML = chars.map(c => `<span class="char">${c}</span>`).join('');
 
 });
-
-
 }
 
 //Equivalent to hitting the play button on my big ol' music box once per minute!

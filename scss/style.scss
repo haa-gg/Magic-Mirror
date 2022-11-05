@@ -13,6 +13,10 @@
 .container {
   padding-top: 1rem;
   position:relative;
+  display: flex;
+    align-items: baseline;
+    justify-content: center;
+    height: 100vh;
 }
 
 body { 
@@ -29,7 +33,7 @@ body {
 
 
 .quote{
-  font-size:30px;
+  font-size:20px;
   position:relative;
   height:100vh;
 }
@@ -39,7 +43,7 @@ body {
   bottom:60px;
   left:30px;
   width:80%;
-  font-size:20px;
+  font-size:12px;
 }
 
 .slide-down .char{
